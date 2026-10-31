@@ -63,7 +63,7 @@ class CoursesClient(APIClient):
         """
         Метод создания курса.
 
-        :param request: Словарь с title, maxScore, minScore, description, estimatedTime, 
+        :param request: Словарь с title, maxScore, minScore, description, estimatedTime,
         previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
