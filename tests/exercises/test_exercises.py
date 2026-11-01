@@ -9,7 +9,7 @@ from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
-from tools.assertions.exercises import (assert_create_exercise_response, assert_exercise, assert_get_exercise_response)
+from tools.assertions.exercises import (assert_create_exercise_response, assert_exercise, assert_get_exercise_response, assert_update_exercise_response)
 
 
 @pytest.mark.exercises
@@ -31,3 +31,12 @@ class TestExercises:
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_get_exercise_response(response_data, function_exercise.response)
         validate_json_schema(response.json(), GetExerciseResponseSchema.model_json_schema())
+
+    def test_update_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
+        """Полное обновление упражнения возвращает все переданные значения."""
+        request = UpdateExerciseRequestSchema()
+        response = exercises_client.update_exercise_api(function_exercise.response.exercise.id, request)
+        response_data = UpdateExerciseResponseSchema.model_validate_json(response.text)
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_update_exercise_response(request, response_data)
+        validate_json_schema(response.json(), UpdateExerciseResponseSchema.model_json_schema())

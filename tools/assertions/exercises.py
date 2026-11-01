@@ -30,3 +30,12 @@ def assert_exercise(actual: ExerciseSchema, expected: ExerciseSchema):
 def assert_get_exercise_response(get_exercise_response: GetExerciseResponseSchema, create_exercise_response: CreateExerciseResponseSchema):
     """Сверить прочитанное упражнение с ответом его создания."""
     assert_exercise(get_exercise_response.exercise, create_exercise_response.exercise)
+
+def assert_update_exercise_response(request: UpdateExerciseRequestSchema, response: UpdateExerciseResponseSchema):
+    """Проверить все шесть полей полного обновления упражнения."""
+    assert_equal(response.exercise.title, request.title, 'title')
+    assert_equal(response.exercise.max_score, request.max_score, 'max_score')
+    assert_equal(response.exercise.min_score, request.min_score, 'min_score')
+    assert_equal(response.exercise.order_index, request.order_index, 'order_index')
+    assert_equal(response.exercise.description, request.description, 'description')
+    assert_equal(response.exercise.estimated_time, request.estimated_time, 'estimated_time')
