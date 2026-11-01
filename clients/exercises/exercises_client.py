@@ -1,3 +1,4 @@
+from tools.routes import APIRoutes
 import allure
 
 from httpx import Response
@@ -15,7 +16,7 @@ class ExercisesClient(APIClient):
         :param query: Query-словарь с courseId.
         :return: httpx.Response с JSON-списком exercises при успехе.
         """
-        return self.get('/api/v1/exercises', params=query.model_dump(by_alias=True))
+        return self.get(APIRoutes.EXERCISES, params=query.model_dump(by_alias=True))
 
     @allure.step('Get exercise by id {exercise_id}')
     def get_exercise_api(self, exercise_id: str) -> Response:
@@ -24,7 +25,7 @@ class ExercisesClient(APIClient):
         :param exercise_id: Идентификатор задания.
         :return: httpx.Response с JSON-объектом exercise при успехе.
         """
-        return self.get(f'/api/v1/exercises/{exercise_id}')
+        return self.get(f'{APIRoutes.EXERCISES}/{exercise_id}')
 
     @allure.step('Create exercise')
     def create_exercise_api(self, request: CreateExerciseRequestSchema) -> Response:
@@ -34,7 +35,7 @@ class ExercisesClient(APIClient):
             description и estimatedTime.
         :return: httpx.Response с JSON созданного exercise при успехе.
         """
-        return self.post('/api/v1/exercises', json=request.model_dump(by_alias=True))
+        return self.post(APIRoutes.EXERCISES, json=request.model_dump(by_alias=True))
 
     @allure.step('Update exercise by id {exercise_id}')
     def update_exercise_api(self, exercise_id: str, request: UpdateExerciseRequestSchema) -> Response:
@@ -45,7 +46,7 @@ class ExercisesClient(APIClient):
             description и estimatedTime.
         :return: httpx.Response с JSON обновлённого exercise при успехе.
         """
-        return self.patch(f'/api/v1/exercises/{exercise_id}', json=request.model_dump(by_alias=True, exclude_none=True))
+        return self.patch(f'{APIRoutes.EXERCISES}/{exercise_id}', json=request.model_dump(by_alias=True, exclude_none=True))
 
     @allure.step('Delete exercise by id {exercise_id}')
     def delete_exercise_api(self, exercise_id: str) -> Response:
@@ -54,7 +55,7 @@ class ExercisesClient(APIClient):
         :param exercise_id: Идентификатор удаляемого задания.
         :return: httpx.Response; тело зависит от контракта удаления сервера.
         """
-        return self.delete(f'/api/v1/exercises/{exercise_id}')
+        return self.delete(f'{APIRoutes.EXERCISES}/{exercise_id}')
 
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """Возвращает проверенную Pydantic-модель получения упражнения exercise_id."""
