@@ -10,3 +10,7 @@ __pycache__/
 .vscode/*
 !.vscode/settings.json
 .pytest_cache/
+
+allure-results/
+
+allure-report/
