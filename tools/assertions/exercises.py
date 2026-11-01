@@ -39,3 +39,8 @@ def assert_update_exercise_response(request: UpdateExerciseRequestSchema, respon
     assert_equal(response.exercise.order_index, request.order_index, 'order_index')
     assert_equal(response.exercise.description, request.description, 'description')
     assert_equal(response.exercise.estimated_time, request.estimated_time, 'estimated_time')
+
+def assert_exercise_not_found_response(actual: InternalErrorResponseSchema):
+    """Удалённое упражнение возвращает точную ошибку Exercise not found."""
+    expected = InternalErrorResponseSchema(details='Exercise not found')
+    assert_internal_error_response(actual, expected)

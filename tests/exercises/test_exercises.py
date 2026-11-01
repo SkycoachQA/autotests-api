@@ -9,7 +9,7 @@ from fixtures.courses import CourseFixture
 from fixtures.exercises import ExerciseFixture
 from tools.assertions.base import assert_status_code
 from tools.assertions.schema import validate_json_schema
-from tools.assertions.exercises import (assert_create_exercise_response, assert_exercise, assert_get_exercise_response, assert_update_exercise_response)
+from tools.assertions.exercises import (assert_create_exercise_response, assert_exercise, assert_get_exercise_response, assert_update_exercise_response, assert_exercise_not_found_response)
 
 
 @pytest.mark.exercises
@@ -40,3 +40,14 @@ class TestExercises:
         assert_status_code(response.status_code, HTTPStatus.OK)
         assert_update_exercise_response(request, response_data)
         validate_json_schema(response.json(), UpdateExerciseResponseSchema.model_json_schema())
+
+    def test_delete_exercise(self, exercises_client: ExercisesClient, function_exercise: ExerciseFixture):
+        """Удалить своё упражнение, затем подтвердить отсутствие через GET и ошибку 404."""
+        exercise_id = function_exercise.response.exercise.id
+        delete_response = exercises_client.delete_exercise_api(exercise_id)
+        assert_status_code(delete_response.status_code, HTTPStatus.OK)
+        get_response = exercises_client.get_exercise_api(exercise_id)
+        response_data = InternalErrorResponseSchema.model_validate_json(get_response.text)
+        assert_status_code(get_response.status_code, HTTPStatus.NOT_FOUND)
+        assert_exercise_not_found_response(response_data)
+        validate_json_schema(get_response.json(), InternalErrorResponseSchema.model_json_schema())
