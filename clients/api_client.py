@@ -1,8 +1,8 @@
-from typing import Any
+import allure
 
+from typing import Any
 from httpx import Client, URL, Response, QueryParams
 from httpx._types import RequestData, RequestFiles
-
 
 class APIClient:
     """Базовый клиент: делегирует HTTP-запросы переданному httpx.Client."""
@@ -11,24 +11,22 @@ class APIClient:
         """Принимает настроенный транспорт client; сохраняет его в self.client."""
         self.client = client
 
-    def get(self, url: URL | str, params: QueryParams | None = None) -> Response:
+    @allure.step('Make GET request to {url}')
+    def get(self, url: URL | str, params: QueryParams | None=None) -> Response:
         """Выполняет GET по url с query-параметрами params; возвращает Response."""
         return self.client.get(url, params=params)
 
-    def post(
-        self,
-        url: URL | str,
-        json: Any | None = None,
-        data: RequestData | None = None,
-        files: RequestFiles | None = None,
-    ) -> Response:
+    @allure.step('Make POST request to {url}')
+    def post(self, url: URL | str, json: Any | None=None, data: RequestData | None=None, files: RequestFiles | None=None) -> Response:
         """Отправляет POST по url с JSON, формой data или files; возвращает Response."""
         return self.client.post(url, json=json, data=data, files=files)
 
-    def patch(self, url: URL | str, json: Any | None = None) -> Response:
+    @allure.step('Make PATCH request to {url}')
+    def patch(self, url: URL | str, json: Any | None=None) -> Response:
         """Обновляет ресурс по url данными json через PATCH; возвращает Response."""
         return self.client.patch(url, json=json)
 
+    @allure.step('Make DELETE request to {url}')
     def delete(self, url: URL | str) -> Response:
         """Удаляет ресурс по url через DELETE; возвращает Response."""
         return self.client.delete(url)
