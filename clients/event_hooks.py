@@ -12,6 +12,6 @@ def curl_event_hook(request: Request):
     """
     # Генерируем команду cURL из объекта запроса
     curl_command = make_curl_from_request(request)
-    
+
     # Прикрепляем сгенерированную cURL команду к отчету Allure
     allure.attach(curl_command, "cURL command", allure.attachment_type.TEXT)
