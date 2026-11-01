@@ -44,3 +44,9 @@ def assert_exercise_not_found_response(actual: InternalErrorResponseSchema):
     """Удалённое упражнение возвращает точную ошибку Exercise not found."""
     expected = InternalErrorResponseSchema(details='Exercise not found')
     assert_internal_error_response(actual, expected)
+
+def assert_get_exercises_response(get_exercises_response: GetExercisesResponseSchema, create_exercise_responses: list[CreateExerciseResponseSchema]):
+    """Проверить длину списка и все поля каждого ожидаемого упражнения."""
+    assert_length(get_exercises_response.exercises, create_exercise_responses, 'exercises')
+    for index, expected in enumerate(create_exercise_responses):
+        assert_exercise(get_exercises_response.exercises[index], expected.exercise)
