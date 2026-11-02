@@ -29,3 +29,6 @@ coverage-results/
 coverage.html
 coverage-report.json
 coverage-history.json
+
+# AI Review generated artifacts
+artifacts/

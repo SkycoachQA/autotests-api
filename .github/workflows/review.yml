@@ -1,0 +1,32 @@
+name: AI Review configuration
+
+on:
+  workflow_dispatch:
+    inputs:
+      pull-request-number:
+        type: string
+        default: '1'
+        description: Pull request context for configuration validation
+
+permissions:
+  contents: read
+
+jobs:
+  validate-config:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+        with:
+          fetch-depth: 0
+      - name: Validate configuration without LLM requests
+        uses: Nikita-Filonov/ai-review@v1.4.0
+        with:
+          review-command: show-config
+        env:
+          VCS__PIPELINE__OWNER: ${{ github.repository_owner }}
+          VCS__PIPELINE__REPO: ${{ github.event.repository.name }}
+          VCS__PIPELINE__PULL_NUMBER: ${{ inputs.pull-request-number }}
+          VCS__HTTP_CLIENT__API_TOKEN: CONFIG_VALIDATION_ONLY
+          LLM__HTTP_CLIENT__API_TOKEN: CONFIG_VALIDATION_ONLY
