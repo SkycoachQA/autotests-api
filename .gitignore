@@ -20,3 +20,12 @@ qa-automation-engineer-api-course/
 server-venv/
 gh-pages/
 allure-history/
+
+.coverage
+.coverage.*
+htmlcov/
+
+coverage-results/
+coverage.html
+coverage-report.json
+coverage-history.json

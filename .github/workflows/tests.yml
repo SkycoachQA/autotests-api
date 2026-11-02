@@ -59,6 +59,30 @@ jobs:
           exit 1
       - name: Run API tests
         run: .venv/bin/python -m pytest -m regression --alluredir=allure-results --numprocesses 2
+      - name: Restore Coverage history
+        uses: actions/cache/restore@v4
+        with:
+          path: coverage-history.json
+          key: coverage-history-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            coverage-history-${{ github.ref_name }}-
+      - name: Generate Coverage report
+        run: .venv/bin/swagger-coverage-tool save-report
+      - name: Cache Coverage history
+        uses: actions/cache/save@v4
+        with:
+          path: coverage-history.json
+          key: coverage-history-${{ github.ref_name }}-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Upload Coverage report
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: coverage-report
+          path: |
+            coverage.html
+            coverage-report.json
+            coverage-history.json
+          if-no-files-found: error
+          retention-days: 7
       - name: Remove credentials from report data
         if: always()
         run: .venv/bin/python -m tools.allure.redact allure-results
