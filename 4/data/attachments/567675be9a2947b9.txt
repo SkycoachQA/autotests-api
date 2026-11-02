@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 403' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Leg represent effect political movement effect wrong.","maxScore":69,"minScore":3,"description":"Reduce theory address box. Successful agreement play against.\nNothing process yet. Fact star people. Control international wish hair increase arrive after.","estimatedTime":"8 weeks","previewFileId":"8e4eb5e9-1830-4665-ad29-b9506298f0ab","createdByUserId":"b4555119-e148-4ce6-a108-b778895333db"}'

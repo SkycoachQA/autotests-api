@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 311' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Evidence we serious fly theory small.","maxScore":55,"minScore":23,"description":"So recent general current until. Month lot rate. Discover choose science alone.","estimatedTime":"2 weeks","previewFileId":"e59cec80-43ab-4dc0-acfc-871e5ea35b5c","createdByUserId":"f827bdc0-bee3-4124-839e-39db1304cc8a"}'

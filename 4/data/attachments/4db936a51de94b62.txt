@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 374' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tell response true deal area here identify.","maxScore":92,"minScore":16,"description":"Standard option live land would though conference. Hot decade type action society population lawyer. Ahead fire everything almost place.","estimatedTime":"2 weeks","previewFileId":"5f5b6690-eede-4800-8a8b-0a90cfbffaa5","createdByUserId":"351dab9b-6578-447f-8233-7e95312c6db7"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 390' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Significant race develop certain occur.","maxScore":73,"minScore":16,"description":"Kind stock another third career man especially. Method skill only.\nRun likely design economic health free. Forward look turn husband. Paper gun look woman.","estimatedTime":"9 weeks","previewFileId":"846ef623-75dd-4b3b-b624-cb932e3e82dd","createdByUserId":"51152bb6-68ee-4ffd-8412-b763bd70fd24"}'

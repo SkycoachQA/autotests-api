@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 419' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Since of suggest though day poor same election.","maxScore":84,"minScore":18,"description":"Why town age a give eye add. Director push law something page place such.\nRegion man whose car. Home interesting physical these old employee. Partner point back few shake call.","estimatedTime":"2 weeks","previewFileId":"196ea77e-ee70-4b57-af51-f36d2c223b3c","createdByUserId":"5ddb5e9b-03f1-489d-aef1-5e439107622f"}'

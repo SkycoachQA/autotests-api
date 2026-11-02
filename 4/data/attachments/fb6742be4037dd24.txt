@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 359' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wind president decade vote.","maxScore":93,"minScore":6,"description":"Factor attorney later happen fund table book. Rather usually yet live. New us election idea guess although develop. Game six gun threat I.","estimatedTime":"3 weeks","previewFileId":"3cb5979d-c192-493c-b46c-48fa5876c9d2","createdByUserId":"c45e8d97-67e8-40a0-8e0b-8576cbe25cfc"}'
