@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 309' \
+  -H 'content-type: application/json' \
+  -d '{"title":"House amount within toward.","courseId":"785d6852-900f-4a86-a5e5-5f24ac1cedbc","maxScore":50,"minScore":1,"orderIndex":70,"description":"Style wonder talk effect have responsibility unit.\nBox understand color direction people nice. Late deal pretty dog mind yeah minute.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,19 @@
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:64 Check create course response
+INFO     BASE_ASSERTIONS:base.py:27 Check that "title" equals to Listen study old.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "max_score" equals to 87
+INFO     BASE_ASSERTIONS:base.py:27 Check that "min_score" equals to 28
+INFO     BASE_ASSERTIONS:base.py:27 Check that "description" equals to Anyone rock care. Traditional bill study probably act.
+Shoulder such out though build. Choice animal course positive national recognize. Window their four detail present worker.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "estimated_time" equals to 6 weeks
+INFO     BASE_ASSERTIONS:base.py:27 Check that "preview_file_id" equals to d1a7bf60-6e57-4067-b40e-e292558b99b4
+INFO     BASE_ASSERTIONS:base.py:27 Check that "created_by_user_id" equals to a46b24ae-b129-4d0d-aa8a-01dbe7e70f5c
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 380' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sound save rest movement radio matter.","courseId":"7b9414db-7cba-4ce1-add5-10c229e3b7a3","maxScore":63,"minScore":2,"orderIndex":90,"description":"Sometimes sister report. Compare international film remain leg financial. Hundred prevent kid wonder church over.\nNice memory art past. Lose enter just beautiful. Nature phone class Republican.","estimatedTime":"5 weeks"}'

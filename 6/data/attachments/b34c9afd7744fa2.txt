@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 373' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Great east like us range.","maxScore":88,"minScore":18,"description":"Send material behind truth general business least. Sister else hope identify answer bank maybe others. Particularly pay above assume scientist rise left.","estimatedTime":"8 weeks","previewFileId":"498ef791-bec6-425e-be84-5d5784ffd82a","createdByUserId":"2247310d-297e-448b-9ed5-325ce55def2c"}'

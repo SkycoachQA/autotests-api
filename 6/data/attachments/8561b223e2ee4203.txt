@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 416' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Consider site since least detail.","maxScore":74,"minScore":20,"description":"During evening teacher. Law blood change pretty consumer. Cut law former arrive TV.\nIndustry individual really military. Technology kitchen ready. Everything ask property seat seven real.","estimatedTime":"1 weeks","previewFileId":"0ff439e1-cb82-478d-b5a4-1cf92e2b9231","createdByUserId":"814061ad-7dde-4417-9b6c-e7090c467e38"}'

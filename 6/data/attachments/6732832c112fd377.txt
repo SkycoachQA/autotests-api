@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 398' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Learn read expect agreement will nature above.","maxScore":66,"minScore":21,"description":"Forward then class lose father. Point eat change space energy room threat sit. Large language specific just. Special radio card read especially letter again.","estimatedTime":"5 weeks","previewFileId":"4ba55105-093b-426f-911a-62a2a5c18fd4","createdByUserId":"2243174c-15b1-4993-aac1-6e9bb98e761e"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 286' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bring view lot indeed.","maxScore":81,"minScore":23,"description":"Step different election seem along save religious. Its treat usually.","estimatedTime":"4 weeks","previewFileId":"62e77c17-ce9f-4329-bb0d-dc7bd1094a6c","createdByUserId":"0b7097f9-460e-4901-9702-46f7391b1a57"}'

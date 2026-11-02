@@ -1,0 +1,25 @@
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/exercises
+INFO     HTTP_CLIENT:event_hooks.py:28 Make GET request to http://localhost:8000/api/v1/exercises/2b028f47-66fd-44db-83ba-eb4f8b39ac8c
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/exercises/2b028f47-66fd-44db-83ba-eb4f8b39ac8c
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     EXERCISES_ASSERTIONS:exercises.py:40 Check get exercise response
+INFO     EXERCISES_ASSERTIONS:exercises.py:27 Check exercise
+INFO     BASE_ASSERTIONS:base.py:27 Check that "id" equals to 2b028f47-66fd-44db-83ba-eb4f8b39ac8c
+INFO     BASE_ASSERTIONS:base.py:27 Check that "title" equals to House amount within toward.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "max_score" equals to 50
+INFO     BASE_ASSERTIONS:base.py:27 Check that "min_score" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "order_index" equals to 70
+INFO     BASE_ASSERTIONS:base.py:27 Check that "description" equals to Style wonder talk effect have responsibility unit.
+Box understand color direction people nice. Late deal pretty dog mind yeah minute.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "estimated_time" equals to 4 weeks
+INFO     BASE_ASSERTIONS:base.py:27 Check that "course_id" equals to 785d6852-900f-4a86-a5e5-5f24ac1cedbc
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

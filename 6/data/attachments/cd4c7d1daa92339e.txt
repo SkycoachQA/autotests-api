@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 390' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Listen study old.","maxScore":87,"minScore":28,"description":"Anyone rock care. Traditional bill study probably act.\nShoulder such out though build. Choice animal course positive national recognize. Window their four detail present worker.","estimatedTime":"6 weeks","previewFileId":"d1a7bf60-6e57-4067-b40e-e292558b99b4","createdByUserId":"a46b24ae-b129-4d0d-aa8a-01dbe7e70f5c"}'

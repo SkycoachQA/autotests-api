@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/d44b495f-7f7c-49d9-8512-23f04a17d0f6' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 226' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Name relationship body resource second smile out.","maxScore":93,"minScore":21,"description":"Throughout month week treat benefit group. Any everyone bring list gas. Personal edge service.","estimatedTime":"1 weeks"}'
