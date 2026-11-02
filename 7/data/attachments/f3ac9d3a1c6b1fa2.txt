@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 378' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Experience animal room despite source.","maxScore":92,"minScore":4,"description":"Network its because watch lay guess. Cold worker wait order within stand group. Possible so back.\nFamily yourself some stock water both position.","estimatedTime":"4 weeks","previewFileId":"e8fcc2a2-cafa-43e1-b70d-3dbfbd5db04a","createdByUserId":"13bb5b29-0179-485c-b76f-9a7cd23c843a"}'

@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/5fb5784f-d56f-498c-a9ca-2ae060a98d24' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 327' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Then represent mean newspaper through.","maxScore":72,"minScore":27,"orderIndex":71,"description":"Section heavy machine floor field simple. Sometimes daughter stay heavy why current public. Type nation sing positive now picture land.\nBeautiful raise a people. Energy might great produce.","estimatedTime":"6 weeks"}'

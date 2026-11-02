@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 377' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Risk since control nation guy pay black current.","maxScore":64,"minScore":17,"description":"Security politics bad wear. Field present bag yard strategy the. Talk down idea leave know just.\nSpring popular key skin kind common.","estimatedTime":"5 weeks","previewFileId":"d36724d9-05b4-48df-923d-8edc306b9e3b","createdByUserId":"bd4cc5d8-a0b2-47b1-815d-b49fe8b54fbf"}'

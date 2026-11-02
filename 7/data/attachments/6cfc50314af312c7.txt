@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 297' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Great drug medical four director.","courseId":"c7efe474-d978-4ab5-b48b-be3f8701d49e","maxScore":61,"minScore":10,"orderIndex":92,"description":"Story cell price.\nJob rock job support who organization skill some. Too hair animal kitchen avoid investment guy.","estimatedTime":"10 weeks"}'

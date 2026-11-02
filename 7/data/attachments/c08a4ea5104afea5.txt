@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/exercises' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 382' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Those market test quickly many adult if technology.","courseId":"91fbb35d-883f-40d2-914c-f125ad0a63ec","maxScore":60,"minScore":17,"orderIndex":65,"description":"Republican away back myself stuff together. Including level second ball offer quality. People west fire loss.\nWorry through use senior know. Wide job weight run police similar road.","estimatedTime":"7 weeks"}'

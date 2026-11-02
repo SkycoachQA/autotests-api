@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 374' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Remember raise responsibility dark fact.","maxScore":85,"minScore":21,"description":"Way push evening bring free fly begin. Mention fast forget major growth.\nArt enjoy once tonight character. Billion edge show still decide.","estimatedTime":"8 weeks","previewFileId":"9ce76f01-b0df-4568-8598-6bc800610e56","createdByUserId":"a326d907-a82f-4071-ad02-a1d1fbe0a41c"}'

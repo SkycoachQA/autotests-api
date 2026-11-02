@@ -1,0 +1,19 @@
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:64 Check create course response
+INFO     BASE_ASSERTIONS:base.py:27 Check that "title" equals to Experience animal room despite source.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "max_score" equals to 92
+INFO     BASE_ASSERTIONS:base.py:27 Check that "min_score" equals to 4
+INFO     BASE_ASSERTIONS:base.py:27 Check that "description" equals to Network its because watch lay guess. Cold worker wait order within stand group. Possible so back.
+Family yourself some stock water both position.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "estimated_time" equals to 4 weeks
+INFO     BASE_ASSERTIONS:base.py:27 Check that "preview_file_id" equals to e8fcc2a2-cafa-43e1-b70d-3dbfbd5db04a
+INFO     BASE_ASSERTIONS:base.py:27 Check that "created_by_user_id" equals to 13bb5b29-0179-485c-b76f-9a7cd23c843a
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

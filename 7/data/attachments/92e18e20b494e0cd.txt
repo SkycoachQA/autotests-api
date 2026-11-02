@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/02df8b50-4307-4cdb-acd0-09d053a0736e' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 300' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Country whether foot state.","maxScore":50,"minScore":28,"description":"Away simply early fill fast happy. Future if both cold trade. Believe change learn attorney.\nPage base each home key. Interview at such page chance couple. National follow check throughout.","estimatedTime":"3 weeks"}'

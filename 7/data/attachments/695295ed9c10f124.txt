@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 403' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Film fund discuss already hotel add law.","maxScore":86,"minScore":6,"description":"Action model though second blue standard. Mission treat worry.\nGovernment do center deep meet. Single rock kind else throughout fish piece. Serious door hair skin some.","estimatedTime":"6 weeks","previewFileId":"a6b75351-847f-4977-9350-65afae1b0886","createdByUserId":"70ff1c44-0b83-4c0b-90cb-ba2acfef7233"}'

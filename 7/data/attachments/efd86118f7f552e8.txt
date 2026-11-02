@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 402' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Agency him show article.","maxScore":66,"minScore":20,"description":"Citizen agency sign assume. Cultural show son discuss yard arrive safe. Want then give garden prevent.\nReport name yeah feel dinner radio. Arrive energy guess ready hour take pretty.","estimatedTime":"5 weeks","previewFileId":"2394cd0c-a015-415f-a201-41da5681aad4","createdByUserId":"bde44108-13ba-4c69-acc3-e15dfcfdcf72"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 335' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Certain sit behavior opportunity.","maxScore":96,"minScore":17,"description":"Very seek according or partner one. Own then data view fear without. End plan here part tough however mind.","estimatedTime":"8 weeks","previewFileId":"646fcd8c-8d4c-494c-9978-956cc15cead5","createdByUserId":"423a4de5-c985-4880-ba19-d664377aede2"}'
