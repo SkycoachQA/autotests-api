@@ -1,0 +1,107 @@
+name: API tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: api-tests-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+      - name: Set up test Python
+        uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.14'
+      - name: Install test dependencies
+        run: |
+          python -m venv .venv
+          .venv/bin/python -m pip install -r requirements.txt
+          .venv/bin/python -m pip check
+          cp .env.example .env
+      - name: Set up server Python
+        uses: actions/setup-python@v7.1.0
+        with:
+          python-version: '3.12'
+      - name: Clone and install test server
+        run: |
+          git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
+          git -C qa-automation-engineer-api-course checkout ebadfac2cd8de74313e7f5469204e6e8171dd20e
+          python -m venv server-venv
+          server-venv/bin/python -m pip install -r qa-automation-engineer-api-course/requirements.txt
+      - name: Start test server
+        env:
+          APP_HOST: http://localhost:8000
+          DATABASE_URL: sqlite+aiosqlite:///./local.db
+          JWT_ALGORITHM: HS256
+          JWT_SECRET_KEY: qa-automation-engineer-api-course-secret-key
+          JWT_ACCESS_TOKEN_EXPIRE: '1800'
+          JWT_REFRESH_TOKEN_EXPIRE: '5184000'
+        run: |
+          server-venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000 --app-dir ./qa-automation-engineer-api-course > server.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl --fail --silent http://localhost:8000/openapi.json > /dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat server.log
+          exit 1
+      - name: Run API tests
+        run: .venv/bin/python -m pytest -m regression --alluredir=allure-results --numprocesses 2
+      - name: Remove credentials from report data
+        if: always()
+        run: .venv/bin/python -m tools.allure.redact allure-results
+      - name: Upload Allure results
+        if: always()
+        uses: actions/upload-artifact@v7.0.2
+        with:
+          name: allure-results
+          path: allure-results/
+          if-no-files-found: error
+          retention-days: 7
+
+  publish-report:
+    needs: run-tests
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7.0.1
+      - name: Download Allure results
+        uses: actions/download-artifact@v8.0.2
+        with:
+          name: allure-results
+          path: allure-results
+      - name: Get Allure history
+        uses: actions/checkout@v7.0.1
+        continue-on-error: true
+        with:
+          ref: gh-pages
+          path: gh-pages
+      - name: Generate Allure report with history
+        uses: simple-elf/allure-report-action@v1.15
+        with:
+          allure_results: allure-results
+          gh_pages: gh-pages
+          allure_report: allure-report
+          allure_history: allure-history
+      - name: Deploy report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4.1.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
