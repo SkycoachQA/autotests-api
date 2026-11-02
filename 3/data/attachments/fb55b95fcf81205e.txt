@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 389' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Part six that several.","maxScore":60,"minScore":6,"description":"Half on describe. Suggest option opportunity hand know perhaps blue. Anyone one expect beautiful.\nItem nearly cause expert Mrs free. Baby choose financial woman generation.","estimatedTime":"7 weeks","previewFileId":"206cda0e-e44f-41c5-9775-e105e00426c5","createdByUserId":"1e698cca-293d-47ae-ad84-b2b671dc56b6"}'

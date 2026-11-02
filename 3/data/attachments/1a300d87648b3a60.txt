@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 347' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Read drop rock Republican law also.","maxScore":60,"minScore":7,"description":"Class agency through oil. South theory put friend.\nBeyond mention available. Conference serious friend past cultural.","estimatedTime":"8 weeks","previewFileId":"1b48d455-b0fc-476b-8618-69a484377532","createdByUserId":"1bd72a02-a9e3-4fbc-b199-292010a8ce4b"}'

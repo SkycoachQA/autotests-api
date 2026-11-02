@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 380' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Throw week process them.","maxScore":68,"minScore":29,"description":"Argue few capital computer. Either when same they.\nWhere stand art series move fight kind. Almost send American. Leg investment avoid blue fire treatment raise.","estimatedTime":"9 weeks","previewFileId":"cd10afb7-7836-4bf6-92a8-1d34800f0dff","createdByUserId":"e9309d4d-6542-4801-af7c-9647f677700c"}'

@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 401' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Notice improve fight society bad green future.","maxScore":77,"minScore":27,"description":"Hotel type say need case senior marriage. Source step these yet community whom hope.\nMake available day full. Ball reality business together best have exactly.","estimatedTime":"6 weeks","previewFileId":"dd8bccd1-db62-4d0c-b731-8a678a709b74","createdByUserId":"fd296128-8836-4578-865d-80e685ab4639"}'

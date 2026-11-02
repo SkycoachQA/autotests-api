@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 307' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Training might within degree dream better mother.","maxScore":58,"minScore":23,"description":"Could body town letter bit. Affect final later not firm effort.","estimatedTime":"3 weeks","previewFileId":"55e3f90f-b581-4f2d-8fed-62b8eeb975ed","createdByUserId":"b3ee702e-66ba-4b99-861b-2b1c49e19c0a"}'

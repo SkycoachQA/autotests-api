@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 434' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sing example yard explain wrong debate again.","maxScore":63,"minScore":6,"description":"Senior health by. Reach daughter agent create impact.\nWhole religious provide home inside out bit. Girl serious push certainly resource artist. Popular voice manage treat sport win network sign.","estimatedTime":"8 weeks","previewFileId":"03c3fde8-38cf-4757-ac00-a193eb48b8ab","createdByUserId":"9a3853ae-7f09-4354-a8f8-c63eb4cdcf42"}'

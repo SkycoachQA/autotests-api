@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 391' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity artist light Democrat mean relate great free.","maxScore":82,"minScore":27,"description":"Story on bring network very experience never only. Personal edge everyone old fly enjoy. Place relate nice ahead kitchen. Walk kind next race.","estimatedTime":"3 weeks","previewFileId":"5dea4f7e-15f0-420a-9826-593cb2ac57e8","createdByUserId":"89d4c6f9-8907-4d75-9d27-8c1db638fae8"}'

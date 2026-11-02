@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/courses/7863e41a-1f8c-4cf4-bef0-68661f3743cd' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 223' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discussion employee particularly hospital wear rich.","maxScore":69,"minScore":12,"description":"Present box necessary now team call behavior. Final claim try if amount really describe.","estimatedTime":"9 weeks"}'

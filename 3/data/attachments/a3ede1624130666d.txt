@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 366' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ever probably surface data page authority he.","maxScore":73,"minScore":15,"description":"Character seem chance practice market. Great design admit form whole question. Next economy country eye president animal much.","estimatedTime":"3 weeks","previewFileId":"f1d8144d-ebf3-4b6b-b26d-279897156d71","createdByUserId":"b1d334fb-c9c5-4a1d-927e-2ebb9de1ad39"}'
