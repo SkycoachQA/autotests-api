@@ -1,0 +1,83 @@
+# The course permits submitting this file through GitHub when GitLab access is blocked.
+stages:
+  - test
+  - report
+  - deploy
+
+default:
+  image: ubuntu:24.04
+
+variables:
+  APP_HOST: "http://localhost:8000"
+  DATABASE_URL: "sqlite+aiosqlite:///./local.db"
+  JWT_ALGORITHM: "HS256"
+  JWT_SECRET_KEY: "qa-automation-engineer-api-course-secret-key"
+  JWT_ACCESS_TOKEN_EXPIRE: "1800"
+  JWT_REFRESH_TOKEN_EXPIRE: "5184000"
+  ALLURE_VERSION: "2.44.0"
+
+run-tests:
+  stage: test
+  allow_failure: true
+  before_script:
+    - apt-get update
+    - apt-get install -y python3.12 python3.12-venv git curl
+    - python3.12 -m venv .venv
+    - .venv/bin/python -m pip install -r requirements.txt
+    - cp .env.example .env
+  script:
+    - git clone https://github.com/Nikita-Filonov/qa-automation-engineer-api-course.git
+    - git -C qa-automation-engineer-api-course checkout ebadfac2cd8de74313e7f5469204e6e8171dd20e
+    - python3.12 -m venv server-venv
+    - server-venv/bin/python -m pip install -r qa-automation-engineer-api-course/requirements.txt
+    - server-venv/bin/python -m uvicorn main:app --host 127.0.0.1 --port 8000 --app-dir ./qa-automation-engineer-api-course > server.log 2>&1 &
+    - |
+      for attempt in $(seq 1 60); do
+        if curl --fail --silent http://localhost:8000/openapi.json > /dev/null; then break; fi
+        sleep 1
+      done
+      curl --fail --silent http://localhost:8000/openapi.json > /dev/null
+    - .venv/bin/python -m pytest -m regression --alluredir=allure-results --numprocesses 2
+  after_script:
+    - if [ -d allure-results ]; then .venv/bin/python -m tools.allure.redact allure-results; fi
+  artifacts:
+    when: always
+    paths:
+      - allure-results/
+    expire_in: 7 days
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+publish-report:
+  stage: report
+  when: always
+  needs:
+    - job: run-tests
+      artifacts: true
+  before_script:
+    - apt-get update
+    - apt-get install -y default-jre-headless wget tar
+    - wget -q "https://github.com/allure-framework/allure2/releases/download/${ALLURE_VERSION}/allure-${ALLURE_VERSION}.tgz"
+    - tar -xzf "allure-${ALLURE_VERSION}.tgz"
+  script:
+    - ./allure-${ALLURE_VERSION}/bin/allure generate allure-results -o allure-report --clean
+  artifacts:
+    paths:
+      - allure-report/
+    expire_in: 7 days
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+
+pages:
+  stage: deploy
+  needs:
+    - job: publish-report
+      artifacts: true
+  script:
+    - mkdir -p public
+    - cp -r allure-report/. public/
+  artifacts:
+    paths:
+      - public/
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
