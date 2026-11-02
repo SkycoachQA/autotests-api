@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 362' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fast design always draw probably.","maxScore":58,"minScore":30,"description":"Eight affect stand gas. Cover rock become and.\nFilm public daughter among tend bill. Discussion daughter offer the entire stop plant.","estimatedTime":"7 weeks","previewFileId":"54c936bd-47bf-4a38-90d2-a72e16012658","createdByUserId":"bb3dbd1c-2053-4b0f-a41b-8ecf74efad19"}'

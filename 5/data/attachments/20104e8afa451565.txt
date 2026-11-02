@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 368' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Put personal rise.","maxScore":90,"minScore":8,"description":"May word open hot nor say official. Including report price parent.\nTheir while some admit.\nAround environment likely. Star unit event account street area.","estimatedTime":"3 weeks","previewFileId":"0fcf8bf9-bb2c-44b8-ad0a-335e69b05e17","createdByUserId":"aff08e7b-b5d5-49b5-b5f3-1f78cc50f45d"}'

@@ -1,0 +1,19 @@
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/users
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/authentication/login
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/files
+INFO     HTTP_CLIENT:event_hooks.py:28 Make POST request to http://localhost:8000/api/v1/courses
+INFO     HTTP_CLIENT:event_hooks.py:38 Got response 200 OK from http://localhost:8000/api/v1/courses
+INFO     BASE_ASSERTIONS:base.py:14 Check that response status code equals to 200
+INFO     COURSES_ASSERTIONS:courses.py:64 Check create course response
+INFO     BASE_ASSERTIONS:base.py:27 Check that "title" equals to Art director design physical old.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "max_score" equals to 99
+INFO     BASE_ASSERTIONS:base.py:27 Check that "min_score" equals to 1
+INFO     BASE_ASSERTIONS:base.py:27 Check that "description" equals to Else continue participant. Evening well evening its food. Medical than thus act government. Never field past from.
+Any view difference town heart take. Off need affect.
+INFO     BASE_ASSERTIONS:base.py:27 Check that "estimated_time" equals to 10 weeks
+INFO     BASE_ASSERTIONS:base.py:27 Check that "preview_file_id" equals to 21008eca-a334-4f66-ae7e-4d5503b4117f
+INFO     BASE_ASSERTIONS:base.py:27 Check that "created_by_user_id" equals to 63a954a1-ec18-4a3d-8c34-ea9d0d15802b
+INFO     SCHEMA_ASSERTIONS:schema.py:20 Validating JSON schema

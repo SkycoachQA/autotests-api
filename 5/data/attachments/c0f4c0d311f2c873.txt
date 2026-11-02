@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 339' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trade food artist expect.","maxScore":65,"minScore":9,"description":"Happen people that remain Congress political. Trade especially thank wide leg. Himself issue tax kid left charge pretty.","estimatedTime":"9 weeks","previewFileId":"2d68e847-df88-44ca-a003-fc8926bce609","createdByUserId":"8cff6c57-0720-44c1-b8f7-097a9b9ff9f2"}'

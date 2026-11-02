@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 409' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Recent child enough continue beautiful.","maxScore":70,"minScore":25,"description":"Region TV third democratic wife stuff full. Wide suggest receive specific. Grow many choose protect official.\nReal run deal now off fear subject. Compare popular spend every.","estimatedTime":"3 weeks","previewFileId":"cd394450-da82-4c24-aa5e-50e41766a7fc","createdByUserId":"517f28d0-34fb-4c61-a58c-9be0d44ba807"}'

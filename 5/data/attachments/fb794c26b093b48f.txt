@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 381' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Carry enough study officer cultural other.","maxScore":53,"minScore":13,"description":"Speak toward represent opportunity order low question. Artist foot establish card claim push. Apply international account wrong society hundred.","estimatedTime":"1 weeks","previewFileId":"c796f6ef-f855-426a-b123-e099a21256ee","createdByUserId":"e487b510-8636-4e9b-9a94-62855fdf0525"}'

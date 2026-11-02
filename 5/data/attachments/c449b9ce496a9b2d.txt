@@ -1,0 +1,11 @@
+curl -X 'PATCH' \
+  'http://localhost:8000/api/v1/exercises/2892d058-a95a-4f3d-bcf5-5a01d2a9cfb9' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 265' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Some walk station movement feeling push.","maxScore":59,"minScore":19,"orderIndex":49,"description":"Worker where participant down door resource again. Several hospital wall character fish. Performance ever find history nice a.","estimatedTime":"5 weeks"}'

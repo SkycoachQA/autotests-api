@@ -1,0 +1,11 @@
+curl -X 'POST' \
+  'http://localhost:8000/api/v1/courses' \
+  -H 'host: localhost:8000' \
+  -H 'accept: */*' \
+  -H 'accept-encoding: gzip, deflate' \
+  -H 'connection: keep-alive' \
+  -H 'user-agent: python-httpx/0.28.1' \
+  -H 'authorization: [REDACTED]' \
+  -H 'content-length: 387' \
+  -H 'content-type: application/json' \
+  -d '{"title":"View actually end because task view toward.","maxScore":67,"minScore":1,"description":"Along another art. Simple high size age skin special really ago.\nState drive learn these accept certain ok. Wonder general cold statement focus book.","estimatedTime":"5 weeks","previewFileId":"f353b994-d2fb-4994-af24-13711bbef310","createdByUserId":"b3a23ecf-a4fe-4f8d-9d22-e87eb56da360"}'
